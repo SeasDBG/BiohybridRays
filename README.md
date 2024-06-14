@@ -51,7 +51,8 @@ GeForce GTX 1080. Software was written in Python (V3.6.5), with TensorFlow
 
 `TF_LBM environment.yml`
 
-Description: Conda file for setting up the internal developing environment (IDE).
+#### Description:
+Conda file for setting up the internal developing environment (IDE).
 Includes which packages are used for the rest of the files. Unless otherwise specified, this
 is the default enviroment used throughout for the rest of the code
 
@@ -59,7 +60,8 @@ is the default enviroment used throughout for the rest of the code
 
 `CMAES_env.yml`           
 
-Description: Conda file for setting up the internal developing environment (IDE).
+#### Description: 
+Conda file for setting up the internal developing environment (IDE).
 Includes which packages are used for the rest of the files. Specifically used for evaluating
 CMAES in comparison to other search strategies (see CMA-ES Compare.ipynb)
 
@@ -68,7 +70,8 @@ CMAES in comparison to other search strategies (see CMA-ES Compare.ipynb)
 
 `Swim Search.ipynb`
 
-Description: Main Jupyter notebook for integrating the total set of tasks
+#### Description:
+Main Jupyter notebook for integrating the total set of tasks
 in using ML-DO to search for efficient swimming in biohybrid fin geometries.
 This include generating a master list to store simulations results for each
 sDNA configurations. Then generating the initial search of which shapes to 
@@ -79,8 +82,7 @@ LBM model than simulates the relative travel speed of each swimmer, which is
 used as training data for the neural network model. Model then makes iterative
 suggestions on which swimmers to simulate next.
 
-## Requires:
- 
+#### Requires:
 |Filename| Description|
 |-|-|
 |`DBG_LBM.py`     | Code for performing a LBM fluid dynamics simulation|
@@ -90,13 +92,13 @@ suggestions on which swimmers to simulate next.
 |`SwimNN.py'      | Code for defining the neural network model and displaying results|
 |`Contraction_profile2.txt` | Relative contractile radius data per solid frame|
 
-## Estimated Times on Specified Hardware:
+#### Estimated Times on Specified Hardware:
 - Initial Database Generation: 5-15 minutes
 - Kinematic Simulation: ~2-5 minutes to solve material interactions/ ray
 - Fluid Dynamics Simulation: ~10-25 minutes per ray for 25 second simulation
 - Machine Learning Training Time: ~15 minutes per iteration
 
-## Outputs:
+####  Outputs:
 `results_updated.pkl`
 Main data file. Pickle database file containing the measured distance travelled by each 
 swimmer, as well as it’s updated model label as predicted by the neural network
@@ -135,42 +137,43 @@ Total Run Time for 20 generations (1200 simulations): ~4 weeks
 
 `SwimTravelMovie.ipynb`
 
-Description: jupyter notebook file. Generates a video of a given fin geometry swimming. 
+#### Description:
+Jupyter notebook file. Generates a video of a given fin geometry swimming. 
 Requires that you have  previously run an individual LBM simulation of that swimmer to 
 generate the  relative velocity profile.
 
-Requires:
-
+#### Requires:
 |Filename| Description|
 |-|-|
-|'GeoSwimmer.py'  | Code for generating fin shapes from sDNA sequences|
-|'SwimMesh.py'   | Code for solving fin kinematics and discretizing shapes|
-|'Contraction_profile2.txt' | data on the relative contractile radius as a function of time|
+|`GeoSwimmer.py`  | Code for generating fin shapes from sDNA sequences|
+|`SwimMesh.py`   | Code for solving fin kinematics and discretizing shapes|
+|`Contraction_profile2.txt` | data on the relative contractile radius as a function of time|
 
-Outputs:
+#### Outputs:
 Series of .png files graphing the swimming distance travelled by a geometry
 
-Estimated Times on Specified Hardware:
+#### Estimated Times on Specified Hardware:
 Generating a single video: 2-5 minutes
 
 <------------------------------------------------------------------------------------------->
 
 `PostDatabaseSearch.ipynb`
 
-Description: Jupyter notebook file. Can be used to validate the final machine learning model,
+#### Description: 
+Jupyter notebook file. Can be used to validate the final machine learning model,
 graph the resulting functional landscape, and find 'Top', 'Middle' and 'Bottom' ranked sDNA
 seqeuences. Assumes you have already run the swimsearch algorithim. 
 
-Requires:
+#### Requires:
 |Filename| Description|
 |-|-|
-|'GeoSwimmer.py'  | Code for generating fin shapes from sDNA sequences|
-|'SwimNN.py'     | Code for defining the neural network model and displaying results|
+|`GeoSwimmer.py`  | Code for generating fin shapes from sDNA sequences|
+|`SwimNN.py`     | Code for defining the neural network model and displaying results|
 
-Outputs:
+#### Outputs:
 Functional landscape graph, and a mean square error estiamte
 
-Estimated Times on Specified Hardware:
+#### Estimated Times on Specified Hardware:
 Generating a single video: ~15 minutes to train final model
 
 
@@ -179,23 +182,24 @@ Generating a single video: ~15 minutes to train final model
 
 `NN Sampling Evaluation.ipynb`
 
-Description: Control study for examing different neural network architectures, sampling 
+#### Description:
+Control study for examing different neural network architectures, sampling 
 methods, and normalization approaches. Uses a a priori defined notional data set to evaluate
 relative performance. Data set is multimodal, and has synergestic combinations (defined by 
 GenFooDataFrame function).
 
-Requires:
+#### Requires:
 |Filename| Description|
 |-|-|
-|'GeoSwimmer.py'  | Code for generating fin shapes from sDNA sequences|
+|`GeoSwimmer.py`  | Code for generating fin shapes from sDNA sequences|
 
 
-Outputs:
+#### Outputs:
 provides a text output file which details the number of correctly identified top performing
 sequences. Additionally, provides graphs of the resulting functional space as mapped by the
 neural network model
 
-Estimated Times on Specified Hardware:
+#### Estimated Times on Specified Hardware:
 ~15 minutes to generate results database (can be reused once generated first time)
 ~2 minutes to train a network each generation
 ~2 hours to evaluate a given search method
@@ -204,23 +208,23 @@ Estimated Times on Specified Hardware:
 
 `CMA-ES Compare.ipynb `
 
-Description: Control study for examing covariance matrix adapted evolutionary strategies as a
+#### Description:
+Control study for examing covariance matrix adapted evolutionary strategies as a
 search algorithim compared to ML-DO. Uses a a priori defined notional data set to evaluate
 relative performance. Data set is multimodal, and has synergestic combinations (defined by 
 GenFooDataFrame function).
 
-Requires:
-
+#### Requires:
 |Filename| Description|
 |-|-|
 |`GeoSwimmer.py`  | Code for generating fin shapes from sDNA sequences|
 
-Outputs:
+#### Outputs:
 Provides a text output file which details the number of correctly identified top performing
 sequences. Additionally, provides graphs of the sampled points projected into a 2D functional
 space representation.
 
-Estimated Times on Specified Hardware:
+#### Estimated Times on Specified Hardware:
 ~15 minutes to generate results database (can be reused once generated first time)
 ~4 hours to run the entire search
 
@@ -228,20 +232,21 @@ Estimated Times on Specified Hardware:
 
 `Directed_Evolution_Compare.ipynb`
 
-Description: Control study for examing directed evolution as a search algorithim compared to
+#### Description:
+Control study for examing directed evolution as a search algorithim compared to
 ML-DO. Uses a a priori defined notional data set to evaluaterelative performance. Data set is
 multimodal, and has synergestic combinations (defined by GenFooDataFrame function).
 
-Requires:
+#### Requires:
 |Filename| Description|
 |-|-|
 |`GeoSwimmer.py`  | Code for generating fin shapes from sDNA sequences|
 
-Outputs:
+#### Outputs:
 Provides a text output file which details the number of correctly identified top performing
 sequences. Additionally, provides graphs of the sampled points projected into a 2D functional
 space representation.
 
-Estimated Times on Specified Hardware:
+#### Estimated Times on Specified Hardware:
 ~15 minutes to generate results database (can be reused once generated first time)
 ~5 minutes to evaluate the entire search method
