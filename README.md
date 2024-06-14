@@ -3,10 +3,11 @@
 ### Written by John Zimmerman
 ### Updated 6/14/2021
 
-## Code related to the paper: 
-## _Bioinspired Design of a Tissue Engineered Ray with Machine Learning_
+## Description: 
+### Code related to the paper: 
+### _Bioinspired Design of a Tissue Engineered Ray with Machine Learning_
 
-## Source code for simulating biohybrid swimming performance and using machinelearning to iteratively select improved fin geometries
+Source code for simulating biohybrid swimming performance and using machinelearning to iteratively select improved fin geometries
 
 ### Main Inlcuded Files:
 
