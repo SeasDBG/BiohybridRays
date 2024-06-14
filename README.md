@@ -9,6 +9,9 @@
 
 Source code for simulating biohybrid swimming performance and using machine learning to iteratively select improved fin geometries
 
+Fluid dyanmics simulations are based in part off of original work done by Oliver Hennigh, which can be found at the following:
+[Github Link](https://github.com/loliverhennigh/Lattice-Boltzmann-fluid-flow-in-Tensorflow)
+
 ### Main Inlcuded Files:
 
 #### Enviroment Files
