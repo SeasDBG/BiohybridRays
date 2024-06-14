@@ -4,7 +4,7 @@
 ### Updated 6/14/2021
 
 ## Code related to the paper: 
-Bioinspired Design of a Tissue Engineered Ray with Machine Learning
+## _Bioinspired Design of a Tissue Engineered Ray with Machine Learning_
 
 ## Source code for simulating biohybrid swimming performance and using machinelearning to iteratively select improved fin geometries
 
