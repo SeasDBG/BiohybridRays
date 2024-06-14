@@ -89,7 +89,7 @@ suggestions on which swimmers to simulate next.
 |`GeoSwimmer.py`  | Code for generating fin shapes from sDNA sequences|
 |`is_point.py`    | Code for checking if a lattice point is contained in a prism|
 |`SwimMesh.py`    | Code for solving fin kinematics and discretizing shapes|
-|`SwimNN.py'      | Code for defining the neural network model and displaying results|
+|`SwimNN.py`      | Code for defining the neural network model and displaying results|
 |`Contraction_profile2.txt` | Relative contractile radius data per solid frame|
 
 #### Estimated Times on Specified Hardware:
