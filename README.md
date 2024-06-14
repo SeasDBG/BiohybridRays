@@ -36,6 +36,7 @@ Bioinspired Design of a Tissue Engineered Ray with Machine Learning
 |`Directed_Evolution_Compare.ipynb`| Evaluating DE on a control dataset |
 
 <------------------------------------------------------------------------------------------->
+
 ### Computer Hardware
 All simulations and machine learning were performed Dell Precision 3630 Tower, 
 equipped with an Intel Core i7-8700k CPU (3.7 GHz), 16 GB RAM, and an NVIDIA 
@@ -44,8 +45,10 @@ GeForce GTX 1080. Software was written in Python (V3.6.5), with TensorFlow
 <------------------------------------------------------------------------------------------->
 
 
+
 ## Included Files
 <------------------------------------------------------------------------------------------->
+
 `TF_LBM environment.yml`
 
 Description: Conda file for setting up the internal developing environment (IDE).
@@ -53,6 +56,7 @@ Includes which packages are used for the rest of the files. Unless otherwise spe
 is the default enviroment used throughout for the rest of the code
 
 <------------------------------------------------------------------------------------------->
+
 `CMAES_env.yml`           
 
 Description: Conda file for setting up the internal developing environment (IDE).
@@ -61,6 +65,7 @@ CMAES in comparison to other search strategies (see CMA-ES Compare.ipynb)
 
 
 <------------------------------------------------------------------------------------------->
+
 `Swim Search.ipynb`
 
 Description: Main Jupyter notebook for integrating the total set of tasks
@@ -82,7 +87,7 @@ suggestions on which swimmers to simulate next.
 |`GeoSwimmer.py`  | Code for generating fin shapes from sDNA sequences|
 |`is_point.py`    | Code for checking if a lattice point is contained in a prism|
 |`SwimMesh.py`    | Code for solving fin kinematics and discretizing shapes|
-|`SwimNN.py      | Code for defining the neural network model and displaying results|
+|`SwimNN.py'      | Code for defining the neural network model and displaying results|
 |`Contraction_profile2.txt` | Relative contractile radius data per solid frame|
 
 ## Estimated Times on Specified Hardware:
@@ -127,6 +132,7 @@ Text file containing a recording of the instantaneous velocity of a biohybrid fi
 Total Run Time for 20 generations (1200 simulations): ~4 weeks
 
 <------------------------------------------------------------------------------------------->
+
 `SwimTravelMovie.ipynb`
 
 Description: jupyter notebook file. Generates a video of a given fin geometry swimming. 
@@ -137,9 +143,9 @@ Requires:
 
 |Filename| Description|
 |-|-|
-|GeoSwimmer.py  | Code for generating fin shapes from sDNA sequences|
-|SwimMesh.py    | Code for solving fin kinematics and discretizing shapes|
-|Contraction_profile2.txt | data on the relative contractile radius as a function of time|
+|'GeoSwimmer.py'  | Code for generating fin shapes from sDNA sequences|
+|'SwimMesh.py'   | Code for solving fin kinematics and discretizing shapes|
+|'Contraction_profile2.txt' | data on the relative contractile radius as a function of time|
 
 Outputs:
 Series of .png files graphing the swimming distance travelled by a geometry
@@ -148,6 +154,7 @@ Estimated Times on Specified Hardware:
 Generating a single video: 2-5 minutes
 
 <------------------------------------------------------------------------------------------->
+
 `PostDatabaseSearch.ipynb`
 
 Description: Jupyter notebook file. Can be used to validate the final machine learning model,
@@ -157,8 +164,8 @@ seqeuences. Assumes you have already run the swimsearch algorithim.
 Requires:
 |Filename| Description|
 |-|-|
-|GeoSwimmer.py  | Code for generating fin shapes from sDNA sequences|
-|SwimNN.py      | Code for defining the neural network model and displaying results|
+|'GeoSwimmer.py'  | Code for generating fin shapes from sDNA sequences|
+|'SwimNN.py'     | Code for defining the neural network model and displaying results|
 
 Outputs:
 Functional landscape graph, and a mean square error estiamte
@@ -169,6 +176,7 @@ Generating a single video: ~15 minutes to train final model
 
 
 <------------------------------------------------------------------------------------------->
+
 `NN Sampling Evaluation.ipynb`
 
 Description: Control study for examing different neural network architectures, sampling 
@@ -179,7 +187,7 @@ GenFooDataFrame function).
 Requires:
 |Filename| Description|
 |-|-|
-|GeoSwimmer.py  | Code for generating fin shapes from sDNA sequences|
+|'GeoSwimmer.py'  | Code for generating fin shapes from sDNA sequences|
 
 
 Outputs:
@@ -188,11 +196,12 @@ sequences. Additionally, provides graphs of the resulting functional space as ma
 neural network model
 
 Estimated Times on Specified Hardware:
-~15 minutes to generate results database (can be reused once generated firt time)
+~15 minutes to generate results database (can be reused once generated first time)
 ~2 minutes to train a network each generation
 ~2 hours to evaluate a given search method
 
 <------------------------------------------------------------------------------------------->
+
 `CMA-ES Compare.ipynb `
 
 Description: Control study for examing covariance matrix adapted evolutionary strategies as a
@@ -212,10 +221,11 @@ sequences. Additionally, provides graphs of the sampled points projected into a 
 space representation.
 
 Estimated Times on Specified Hardware:
-~15 minutes to generate results database (can be reused once generated firt time)
+~15 minutes to generate results database (can be reused once generated first time)
 ~4 hours to run the entire search
 
 <------------------------------------------------------------------------------------------->
+
 `Directed_Evolution_Compare.ipynb`
 
 Description: Control study for examing directed evolution as a search algorithim compared to
@@ -233,5 +243,5 @@ sequences. Additionally, provides graphs of the sampled points projected into a 
 space representation.
 
 Estimated Times on Specified Hardware:
-~15 minutes to generate results database (can be reused once generated firt time)
+~15 minutes to generate results database (can be reused once generated first time)
 ~5 minutes to evaluate the entire search method
